@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Food  Order App</string>
+    <string name="name">Your Name</string>
+    <string name="todo">TODO</string>
+    <string name="double_patties_burger">Double Patties Burger</string>
+    <string name="textview">TextView</string>
+    <string name="ordernumber">Ordernumber</string>
+    <string name="_2563254165">2563254165</string>
+    <string name="food_name">Food Name</string>
+    <string name="_1">1</string>
+    <string name="descriptionFood">Meaty portobello mushrooms make for the perfect vegetarian double patties burger!</string>
+</resources>
