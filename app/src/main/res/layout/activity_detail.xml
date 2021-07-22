@@ -139,7 +139,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
-                android:text="$"
+                android:text="Rs."
                 android:textColor="@color/red"
                 android:textSize="18dp"
                 android:textStyle="bold" />

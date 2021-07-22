@@ -93,7 +93,7 @@
                         android:layout_marginTop="0dp"
                         android:layout_marginRight="2dp"
                         android:layout_weight="0"
-                        android:text="$"
+                        android:text="Rs."
                         android:textColor="@color/red"
                         android:textSize="18sp"
                         android:textStyle="bold" />

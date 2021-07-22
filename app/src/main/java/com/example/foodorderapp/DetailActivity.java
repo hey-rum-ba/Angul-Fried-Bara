@@ -6,12 +6,18 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
-
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.net.URL;
+import java.net.URLConnection;
+import java.net.URLEncoder;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.foodorderapp.databinding.ActivityDetailBinding;
 
+import java.net.HttpURLConnection;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class DetailActivity extends AppCompatActivity {
@@ -54,7 +60,7 @@ public class DetailActivity extends AppCompatActivity {
         final int image =getIntent().getIntExtra("image",0);
         final String name =getIntent().getStringExtra("name");
         final String description =getIntent().getStringExtra("desc");
-
+        SMSHelper helpem= new SMSHelper();
         binding.detailimage.setImageResource(image);
         binding.detailname.setText(name);
         binding.descriptionFood.setText(description);
@@ -70,7 +76,36 @@ public class DetailActivity extends AppCompatActivity {
                     price,
                     counter
                     );
-            if(isInserted) Toast.makeText(DetailActivity.this,"Check your orders on MY ORDERS menu" , Toast.LENGTH_SHORT).show();
+
+
+                try {
+                    // Construct data
+                    String apiKey = "apikey=" + "NzI3MjM1NWEzMTRhNjk0NzZiNzAzNjU4Nzk3MTY3Nzk=";
+                    String message = "&message=" + "This is your message";
+                    String sender = "&sender=" + "TXTLCL";
+                    String numbers = "&numbers=" + "917978638416";
+
+                    // Send data
+                    HttpURLConnection conn = (HttpURLConnection) new URL("https://api.textlocal.in/send/?").openConnection();
+                    String data = apiKey + numbers + message + sender;
+                    conn.setDoOutput(true);
+                    conn.setRequestMethod("POST");
+                    conn.setRequestProperty("Content-Length", Integer.toString(data.length()));
+                    conn.getOutputStream().write(data.getBytes("UTF-8"));
+                    final BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+                    final StringBuffer stringBuffer = new StringBuffer();
+                    String line;
+                    while ((line = rd.readLine()) != null) {
+                        stringBuffer.append(line);
+                    }
+                    rd.close();
+
+                } catch (Exception e) {
+                    System.out.println("Error in SMS service "+e);
+                }
+
+
+            if(isInserted) {Toast.makeText(DetailActivity.this,"Check your orders on MY ORDERS menu" , Toast.LENGTH_SHORT).show();helpem.sendSms();}
             else Toast.makeText(DetailActivity.this,"Error occurred", Toast.LENGTH_SHORT).show();
             finish();
         });

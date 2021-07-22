@@ -31,18 +31,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         ArrayList<MainModel> list =new ArrayList<>();
-        list.add(new MainModel(R.drawable.bara, "Medu Vada", 1, "Delicious doughnut shaped Medu vada with a crispy exterior and soft interior with  Black gram, dried yellow peas, or dried white peas are cooked with gravy in the traditional style"));
-        list.add(new MainModel(R.drawable.aaloo_bara, "Aaloo Vada", 2, "Mouthwatering Medu vada stuffed with mashed potato and parmesan cheese, served hot with cheese mayonnaise sauce"));
-        list.add(new MainModel(R.drawable.masala_bara, "Masala Vada", 2, "Appetizing Vada with enrichment of Indian traditional spices along with nutrients of "));
-        list.add(new MainModel(R.drawable.bara_chat, "Vada Chaat", 3, "Chaat is an umbrella term for ingredients like chickpeas, boiled potatoes, yogurt sauce, and tamarind and coriander \n" +
+        list.add(new MainModel(R.drawable.bara, "Medu Vada", 30, "Delicious doughnut shaped Medu vada with a crispy exterior and soft interior with  Black gram, dried yellow peas, or dried white peas are cooked with gravy in the traditional style"));
+        list.add(new MainModel(R.drawable.aaloo_bara, "Aaloo Vada", 40, "Mouthwatering Medu vada stuffed with mashed potato and parmesan cheese, served hot with cheese mayonnaise sauce"));
+        list.add(new MainModel(R.drawable.masala_bara, "Masala Vada", 40, "Appetizing Vada with enrichment of Indian traditional spices along with nutrients of coconut chutney"));
+        list.add(new MainModel(R.drawable.bara_chat, "Vada Chaat", 50, "Chaat is an umbrella term for ingredients like chickpeas, boiled potatoes, yogurt sauce, and tamarind and coriander\n" +
                 "chutneys with toppings of pomegranate seeds and sev  that usually feature some fried dough with various ingredients that typically create a spicy, tangy and sweet-salty flavour"));
-        list.add(new MainModel(R.drawable.bara_cholial, "Vada Masalaam", 4, "Flavoursome Vada is cooked with a spicy thick gravy. The specialty of this recipe is that the Vada is cooked\n" +
+        list.add(new MainModel(R.drawable.bara_cholial, "Vada Masalaam", 40, "Flavoursome Vada is cooked with a spicy thick gravy. The specialty of this recipe is that the Vada is cooked\n" +
                 "with it's own juice. With the addition of a bare minimum amount of water"));
-        list.add(new MainModel(R.drawable.bada_wtih_shezwan, "Schezwan Vada", 2, "Delicious doughnut shaped Medu vada with a crispy exterior and soft interior with spicy and pungent sauce made with dry red chillies, garlic, shallots and spices- a fusion Indo Chinese recipe of a hot chili sauce."));
-        list.add(new MainModel(R.drawable.rava_bada, "Rava Vada", 1, "Luscious deep fried snack made of Semolina, yogurt, onions, grated ginger, chopped curry leaves and roughly torn coriander leaves, served with pulpy tomato and peanut savory"));
-        list.add(new MainModel(R.drawable.dahi_vadas, "Dahi Vada", 2, "Fluffy, tender, tangy and sweet Dahi Vada are a combination of all your favorite flavors and textures in one tasty snack. They consist of homemade fried lentil dumpling fritters, dunked in creamy whipped yogurt and topped with both spicy and sweet savories."));
-        list.add(new MainModel(R.drawable.peps, "Pepsi", 1, "Refreshing Pepsi"));
-        list.add(new MainModel(R.drawable.cocacola, "Coca Cola", 1, "Refreshing Coke"));
+        list.add(new MainModel(R.drawable.bada_wtih_shezwan, "Schezwan Vada", 30, "Delicious doughnut shaped Medu vada with a crispy exterior and soft interior with spicy and pungent sauce made with dry red chillies, garlic, shallots and spices- a fusion Indo Chinese recipe of a hot chili sauce."));
+        list.add(new MainModel(R.drawable.rava_bada, "Rava Vada", 20, "Luscious deep fried snack made of Semolina, yogurt, onions, grated ginger, chopped curry leaves and roughly torn coriander leaves, served with pulpy tomato and peanut savory"));
+        list.add(new MainModel(R.drawable.dahi_vadas, "Dahi Vada", 30, "Fluffy, tender, tangy and sweet Dahi Vada are a combination of all your favorite flavors and textures in one tasty snack. They consist of homemade fried lentil dumpling fritters, dunked in creamy whipped yogurt and topped with both spicy and sweet savories."));
+        list.add(new MainModel(R.drawable.peps, "Pepsi", 25, "Refreshing Pepsi"));
+        list.add(new MainModel(R.drawable.cocacola, "Coca Cola", 25, "Refreshing Coke"));
 
         MainAdapter adapter = new MainAdapter(list,this);
         binding.recylerview.setAdapter(adapter);
@@ -68,7 +68,4 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void onClick(View view){
-
-    }
 }

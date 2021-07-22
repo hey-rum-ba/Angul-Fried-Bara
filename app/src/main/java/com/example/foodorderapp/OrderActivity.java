@@ -23,7 +23,7 @@ public class OrderActivity extends AppCompatActivity {
         binding = ActivityOrderBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        //ArrayList<OrderModel> list = new ArrayList<>();
+          //ArrayList<OrderModel> list = new ArrayList<>();
 //        list.add(new OrderModel(R.drawable.pizza,"Aina nu pizza khilao", "12","256984786"));
 //        list.add(new OrderModel(R.drawable.burger,"Aina nu burger khilao", "12","256984786"));
 //        list.add(new OrderModel(R.drawable.pepsii,"Aina nu pepsi pilao", "12","256984786"));
